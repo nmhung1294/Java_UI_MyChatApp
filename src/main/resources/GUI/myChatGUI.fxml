@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.shape.Circle?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="400" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="myChatApp.MyChatController">
+    <children>
+        <HBox prefHeight="50.0" spacing="10" AnchorPane.leftAnchor="3" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="10">
+            <ImageView>
+                <Image requestedHeight="25" requestedWidth="25" url="@../img/back_icon.jpg" /> <!-- Thay 'avatar.png' bằng đường dẫn tới hình ảnh đại diện của bạn -->
+            </ImageView>
+            <ImageView>
+                <Image requestedHeight="25" requestedWidth="25" url="@../img/avt.jpg" /> <!-- Thay 'avatar.png' bằng đường dẫn tới hình ảnh đại diện của bạn -->
+            </ImageView>
+            <Label text="Tân sinh viên" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-font-family: 'Arial';" maxWidth="260" /> <!-- Thay 'Tên người dùng' bằng tên thực sự của người dùng -->
+            <Region HBox.hgrow="ALWAYS" /> <!-- Thành phần trống này sẽ đẩy các nút về phía bên phải -->
+            <ImageView>
+                <Image requestedHeight="25" requestedWidth="25" url="@../img/call_icon.jpg" /> <!-- Thay 'info_icon.png' bằng đường dẫn tới hình ảnh biểu tượng thông tin của bạn -->
+            </ImageView>
+            <ImageView>
+                <Image requestedHeight="25" requestedWidth="25" url="@../img/video_call.png" /> <!-- Thay 'info_icon.png' bằng đường dẫn tới hình ảnh biểu tượng thông tin của bạn -->
+            </ImageView>
+            <ImageView>
+                <Image requestedHeight="25" requestedWidth="25" url="@../img/infor.jpg" /> <!-- Thay 'info_icon.png' bằng đường dẫn tới hình ảnh biểu tượng thông tin của bạn -->
+            </ImageView>
+        </HBox>
+        <ScrollPane fx:id="scrollPane" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="50" AnchorPane.bottomAnchor="50">
+            <content>
+                <VBox fx:id="messageContainer" spacing="10">
+
+                </VBox>
+            </content>
+        </ScrollPane>
+        <ImageView AnchorPane.leftAnchor="0" AnchorPane.bottomAnchor="3">
+            <Image requestedHeight="47" requestedWidth="45" url="@../img/cam.png"/>
+        </ImageView>
+        <ImageView AnchorPane.leftAnchor="50" AnchorPane.bottomAnchor="3">
+            <Image requestedHeight="47" requestedWidth="30" url="@../img/micro_icon.jpg"/>
+        </ImageView>
+        <TextField fx:id="chatInput" onAction="#sendMessage"  style=" -fx-border-radius: 20" AnchorPane.leftAnchor="85" AnchorPane.rightAnchor="40" AnchorPane.bottomAnchor="3" prefHeight="47"/>
+        <ImageView AnchorPane.rightAnchor="5" AnchorPane.bottomAnchor="3">
+            <Image requestedHeight="47" requestedWidth="30" url="@../img/like.png"/>
+        </ImageView>
+
+    </children>
+</AnchorPane>
