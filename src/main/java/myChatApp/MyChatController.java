@@ -79,7 +79,7 @@ public class MyChatController {
         Region spacer = new Region(); // Tạo một thành phần trống
         messageLabel.setMaxWidth(260);
         HBox hbox = new HBox(spacer, messageLabel);
-        hbox.setPrefWidth(390);
+        hbox.setPrefWidth(380);
         hbox.setAlignment(Pos.CENTER_RIGHT);
         HBox.setHgrow(spacer, Priority.ALWAYS);
         return hbox;
